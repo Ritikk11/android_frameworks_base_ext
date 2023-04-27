@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Copyright (C) 2023 The Android Open Source Project
+  Copyright (C) 2020 The Android Open Source Project
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -13,11 +13,17 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
--->
+  -->
 
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_enabled="false"
-          android:color="@android:color/system_accent1_100"
-          android:alpha="?android:attr/disabledAlpha" />
-    <item android:color="@android:color/system_accent1_100"/>
-</selector>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:top="@dimen/settingslib_switch_thumb_margin"
+        android:bottom="@dimen/settingslib_switch_thumb_margin">
+        <shape android:shape="oval">
+            <size
+                android:height="@dimen/settingslib_switch_thumb_size"
+                android:width="@dimen/settingslib_switch_thumb_size"/>
+            <solid android:color="@color/settingslib_thumb_off_color"/>
+        </shape>
+    </item>
+</layer-list>
